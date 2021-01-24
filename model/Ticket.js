@@ -27,12 +27,11 @@ const ticketSchema = new Schema({
     image: {
         type: String
     },
-    comments: {
-        type: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Comment'
-        }]
-    }
+    isComplete: {
+        type: Boolean,
+        default: false
+    },
+    comments: []
 }, {timestamps: true})
 
 const Ticket = mongoose.model('Ticket', ticketSchema)

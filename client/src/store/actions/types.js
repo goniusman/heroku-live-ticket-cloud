@@ -1,0 +1,8 @@
+export const SET_USER = 'SET_USER'  
+export const USERS_ERROR = 'USERS_ERROR'  
+export const SET_TICKET = 'SET_TICKET'
+export const TICKET_ERROR = 'TICKET_ERROR'
+export const LOAD_TICKETS = 'LOAD_TICKETS' 
+export const SINGLE_TICKET = 'SINGLE_TICKET'  
+export const UPDATE_TICKET = 'UPDATE_TICKET'  
+export const REMOVE_TICKET = 'REMOVE_TICKET'  

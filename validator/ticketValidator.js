@@ -4,9 +4,14 @@ const validator = require('validator')
 const validate = ticket => {
     let error = {}
 
-    if(!ticket.name){
+    if(!ticket.name){ 
         error.name = "Please Provide Your Name"
     }
+    if(!ticket.topic){ 
+        error.name = "You didn't select any department"
+    }
+
+   
     if(!ticket.email){
         error.email = "Please Provide Your Email"
     }else if(!validator.isEmail(ticket.email)){

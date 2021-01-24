@@ -1,20 +1,16 @@
 const router = require('express').Router()
-const { create, getAll, getSingleTicket, update,remove } = require('../controllers/ticketController')
+const { create, getAll, getSingleTicket, update,remove, updateSolved, imageUpload } = require('../controllers/ticketController')
 
 // for authenticate user
-// const authenticate = require('../authenticate')
-// router.get('/', authenticate, getAll)
-// router.post('/', authenticate, create)
-// router.get('/:ticketId', authenticate, getSingleTicket)
-// router.put('/:ticketId', authenticate, update)
-// router.delete('/:ticketId', authenticate, remove)
+const authenticate = require('../authenticate')
 
+router.post('/', create)
+router.post('/upload/:ticketId', imageUpload)
 
 router.get('/', getAll)
-router.post('/', create)
 router.get('/:ticketId', getSingleTicket)
-
 router.put('/:ticketId', update)
+router.put('/issuetoggle/:ticketId', updateSolved)
 router.delete('/:ticketId', remove)
 
 
