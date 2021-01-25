@@ -35,12 +35,6 @@ app.use('/api/users', userRouter)
 app.use('/api/ticket', ticketRouter)
 
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'welcomwe to our new server application'
-    })
-})
-  
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))
@@ -50,6 +44,12 @@ if(process.env.NODE_ENV === 'production'){
 }
 
 
+
+app.get('/', (req, res) => {
+    res.json({
+        message: 'welcomwe to our new server application'
+    })
+})
 
 
 
